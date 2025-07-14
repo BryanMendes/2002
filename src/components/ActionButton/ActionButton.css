@@ -5,48 +5,49 @@
   color: #F0F0F0;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 1.1rem;
   transition: color 0.2s;
   cursor: pointer;
 }
+
 .action-link:hover {
   color: #9DFF70;
 }
+
 .action-link-main {
   display: flex;
   flex-direction: column;
   line-height: 0.9;
-  font-size: 1.3rem;
   font-weight: 900;
   letter-spacing: -0.03em;
 }
+
 .action-link-vertical {
   display: flex;
   align-items: center;
   border-left: 3px solid #9DFF70;
   margin-left: 16px;
   padding-left: 16px;
-  font-size: 1.3rem;
   font-weight: 700;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   letter-spacing: 0.1em;
-  height: 50px;
   text-align: center;
 }
-@media (max-width: 600px) {
+
+/* Mobile styles */
+@media (max-width: 1023px) {
   .action-link-main {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .action-link-vertical {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     height: 40px;
-    margin-left: 10px;
-    padding-left: 10px;
+    margin-left: 12px;
+    padding-left: 12px;
   }
 }
 
-/* Para desktop, manter tamanho similar aos outros itens do menu */
+/* Desktop styles - match other header items */
 @media (min-width: 1024px) {
   .action-link-main {
     font-size: 1.3rem;
