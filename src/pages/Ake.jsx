@@ -79,9 +79,9 @@ function Ake() {
         {/* Galeria de imagens */}
         <div style={{
           display: 'flex',
-          flexWrap: 'wrap',
-          gap: '32px',
-          justifyContent: 'center',
+          flexDirection: 'column',
+          gap: '24px',
+          alignItems: 'center',
           marginTop: '32px',
         }}>
           {imagens.map((img, idx) => (
@@ -90,15 +90,16 @@ function Ake() {
               borderRadius: '12px',
               boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
               padding: '16px',
-              maxWidth: '320px',
+              width: '100%',
+              maxWidth: '500px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
             }}>
               <img src={img.src} alt={img.legenda} style={{
                 width: '100%',
-                maxWidth: '280px',
-                maxHeight: '280px',
+                height: 'auto',
+                maxHeight: '400px',
                 objectFit: 'cover',
                 borderRadius: '8px',
                 marginBottom: '12px',

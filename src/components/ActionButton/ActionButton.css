@@ -5,7 +5,7 @@
   color: #F0F0F0;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   transition: color 0.2s;
   cursor: pointer;
 }
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   line-height: 0.9;
-  font-size: 2.1rem;
+  font-size: 1.3rem;
   font-weight: 900;
   letter-spacing: -0.03em;
 }
@@ -24,14 +24,14 @@
   display: flex;
   align-items: center;
   border-left: 3px solid #9DFF70;
-  margin-left: 18px;
-  padding-left: 18px;
-  font-size: 1.1rem;
+  margin-left: 16px;
+  padding-left: 16px;
+  font-size: 1.3rem;
   font-weight: 700;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   letter-spacing: 0.1em;
-  height: 60px;
+  height: 50px;
   text-align: center;
 }
 @media (max-width: 600px) {
@@ -43,5 +43,18 @@
     height: 40px;
     margin-left: 10px;
     padding-left: 10px;
+  }
+}
+
+/* Para desktop, manter tamanho similar aos outros itens do menu */
+@media (min-width: 1024px) {
+  .action-link-main {
+    font-size: 1.3rem;
+  }
+  .action-link-vertical {
+    font-size: 1.3rem;
+    height: 50px;
+    margin-left: 16px;
+    padding-left: 16px;
   }
 }

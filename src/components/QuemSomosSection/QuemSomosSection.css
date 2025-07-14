@@ -20,14 +20,14 @@
   align-items: flex-start;
   background: #1E392A;
   padding: 0 20px 0 20px;
-  height: 90px;
+  height: 70px;
   border-bottom: 2px solid #3A4C3A;
   position: relative;
 }
 
 .quem-somos-main-text {
   font-family: 'Montserrat', 'Montserrat ExtraBold', sans-serif;
-  font-size: 6.8rem;
+  font-size: 4.5rem;
   font-weight: 900;
   color: #F0F0C0;
   letter-spacing: -0.04em;
@@ -41,7 +41,7 @@
 
 .quem-somos-rotated-text {
   font-family: 'Montserrat', 'Montserrat ExtraBold', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: #F0F0C0;
   letter-spacing: 0.1em;
@@ -49,7 +49,7 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   margin-bottom: 0;
-  margin-top: -10px;
+  margin-top: -8px;
   display: flex;
   align-items: flex-start;
   height: 100%;
@@ -111,11 +111,11 @@
     max-width: 98vw;
   }
   .quem-somos-title-container {
-    height: 60px;
+    height: 50px;
     padding: 0 10px 0 10px;
   }
   .quem-somos-main-text {
-    font-size: 4.0rem;
+    font-size: 3.2rem;
   }
   .quem-somos-rotated-text {
     font-size: 0.7rem;

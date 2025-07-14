@@ -12,6 +12,7 @@ function GuiRomana() {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
+      transform: 'scaleX(-1)',
       color: '#F0F0C0', 
       fontSize: '1.2rem',
       textAlign: 'center',
@@ -22,11 +23,12 @@ function GuiRomana() {
       <Link to="/" style={{
         position: 'absolute',
         top: '20px',
-        left: '20px',
+        right: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '2rem',
-        zIndex: 10
+        zIndex: 10,
+        transform: 'scaleX(-1)'
       }}>
         ←
       </Link>
@@ -36,7 +38,8 @@ function GuiRomana() {
         padding: '40px',
         borderRadius: '10px',
         maxWidth: '800px',
-        lineHeight: '1.6'
+        lineHeight: '1.6',
+        transform: 'scaleX(-1)'
       }}>
         <h1 style={{fontSize: '3rem', marginBottom: '30px', color: '#F0F0C0'}}>gui romana</h1>
         <p style={{marginBottom: '20px', textAlign: 'justify'}}>
@@ -51,12 +54,13 @@ function GuiRomana() {
       <Link to="/ake" style={{
         position: 'absolute',
         bottom: '20px',
-        right: '20px',
+        left: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '1rem',
         textAlign: 'right',
-        zIndex: 10
+        zIndex: 10,
+        transform: 'scaleX(-1)'
       }}>
         <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
           <span>próximo</span>
