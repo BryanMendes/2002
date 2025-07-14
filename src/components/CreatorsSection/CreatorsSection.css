@@ -1,0 +1,105 @@
+/* src/components/ImageCarousel/ImageCarousel.css - VERSÃO FINAL CORRIGIDA */
+
+.carousel-section-container {
+  /* 1. GARANTE O FUNDO VERDE PARA TODA A SEÇÃO (INCLUINDO A LEGENDA) */
+  background-color: #1E392A;
+  
+  /* 2. ADICIONA A LINHA SEPARADORA EMBAIXO DE TUDO */
+  border-bottom: 1px solid rgba(240, 240, 240, 0.4);
+  
+  /* Espaço apenas abaixo da legenda, antes da linha */
+  padding-bottom: 40px;
+}
+
+/* A 'janela' do carrossel */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  
+  /* 3. A SOLUÇÃO PARA O TAMANHO CONSISTENTE DAS IMAGENS */
+  aspect-ratio: 4 / 5; /* Proporção de retrato. Mude se precisar (ex: 16/9) */
+  
+  position: relative; /* Para o botão 'next' se posicionar corretamente */
+}
+
+.carousel-track, .carousel-image-frame, .carousel-image {
+  height: 100%; /* Fazem os filhos ocuparem 100% da altura definida pelo aspect-ratio */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image-frame {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  width: 100%;
+  object-fit: contain; /* Garante que a imagem inteira apareça, sem cortes */
+}
+
+/* Legenda que fica abaixo da imagem */
+.carousel-caption {
+  color: #F0F0F0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  max-width: 800px;
+  margin: 20px auto 0 auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* Texto que fica sobre a imagem (ex: 'AKÉ') */
+.carousel-image-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #F0F0F0;
+  font-size: 6rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(255, 0, 0, 0.5), -1px -1px 0px rgba(0, 255, 255, 0.5);
+}
+
+/* Estilo da seta de navegação */
+.carousel-next-button {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.carousel-next-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 4px solid #F0F0F0;
+  border-right: 4px solid #F0F0F0;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .carousel-image-overlay {
+    font-size: 4rem;
+    left: 20px;
+    bottom: 20px;
+  }
+}

@@ -1,0 +1,113 @@
+/* src/index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+/* Este é o reset mais importante. 
+  Ele garante que a página, o corpo dela e o container do React 
+  ocupem todo o espaço disponível, sem margens ou paddings.
+*/
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /* Bónus: previne scroll horizontal acidental */
+  overflow-x: hidden; 
+}
+
+body {
+  font-family: 'Montserrat', 'Montserrat ExtraBold', sans-serif;
+  background-color: #1E392A; /* Mudando para a cor verde padrão do site */
+  color: #F0F0C0;
+}
+
+/* Esta regra continua importante para o cálculo de tamanhos 
+  de todos os elementos.
+*/
+* {
+  box-sizing: border-box;
+  color: #F0F0C0;
+}
+
+/* Z-index stacking context - ensure proper layering */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure all sections have proper stacking - they should not overlap */
+section, 
+div[class*="section"], 
+div[class*="Section"],
+.section-card,
+.Hero,
+.QuemSomosSection,
+.ImageCarousel,
+.PuroSomSection,
+.NossaArteSection,
+.InfoSection,
+.ArchivesSection,
+.NewsletterSection {
+  position: relative;
+  z-index: 1;
+  /* Ensure sections don't overlap */
+  overflow: visible;
+}
+
+/* Specific fixes for sections with absolute positioning */
+.hero-container {
+  z-index: 1;
+}
+
+.hero-video {
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+/* Ensure header stays on top of everything */
+header, 
+div[class*="header"], 
+div[class*="Header"],
+.header-container {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Ensure footer stays at bottom but above sections */
+footer,
+div[class*="footer"],
+div[class*="Footer"] {
+  position: relative;
+  z-index: 10;
+}
+
+/* Prevent any section from being "swallowed" by others */
+.puro-som-section,
+.nossa-arte-section,
+.info-section,
+.archives-section,
+.newsletter-section {
+  position: relative;
+  z-index: 1;
+  /* Ensure these sections are always visible */
+  display: block;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Montserrat ExtraBold', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  color: #F0F0C0;
+  margin: 0;
+  line-height: 1;
+}
+
+strong, b {
+  font-weight: 900;
+  color: #F0F0C0;
+}

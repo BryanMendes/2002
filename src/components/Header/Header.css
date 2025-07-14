@@ -1,0 +1,310 @@
+/* Conteúdo completo e final do Header.css */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000;
+  transition: background-color 0.4s ease-in-out;
+  box-sizing: border-box;
+}
+.header-container.fechado {
+  background-color: transparent;
+}
+.header-container.aberto {
+  background-color: #1E392A;
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+}
+.header-container.fechado .header-aberto-content {
+  display: none;
+}
+.header-container.aberto .header-fechado-content {
+  display: none;
+}
+.header-fechado-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+.logo-2002 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cd-button {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background-color: #00e600;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+}
+.cd-button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+.menu-hamburguer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu-hamburguer .linha {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+}
+.header-aberto-content {
+  display: block;
+  width: 100%;
+  pointer-events: auto;
+}
+.navbar-aberta ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+}
+.navbar-aberta li {
+  position: relative;
+  z-index: 102;
+}
+
+.navbar-aberta a {
+  color: #F0F0F0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 10px 0;
+  position: relative;
+  z-index: 101;
+  pointer-events: auto;
+}
+
+.navbar-aberta a:hover {
+  color: #9DFF70;
+}
+.close-item {
+  margin-left: auto;
+}
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #9DFF70;
+}
+.close-button::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+.close-button::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.navbar-desktop {
+  display: none;
+}
+
+/* Responsividade para desktop */
+@media (min-width: 1024px) {
+  .header-container {
+    padding: 30px 80px;
+  }
+  
+  .logo-2002 {
+    font-size: 2rem;
+  }
+  
+  .cd-button {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .menu-hamburguer .linha {
+    width: 35px;
+    height: 4px;
+  }
+  
+  .navbar-aberta a {
+    font-size: 1.3rem;
+  }
+  
+  .navbar-aberta ul {
+    gap: 40px;
+  }
+  
+  .close-button {
+    width: 35px;
+    height: 35px;
+  }
+  .menu-hamburguer {
+    display: none !important;
+  }
+  .header-aberto-content {
+    display: none !important;
+  }
+  .navbar-desktop {
+    display: block !important;
+  }
+  .navbar-desktop ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-desktop li {
+    position: relative;
+  }
+  .navbar-desktop a {
+    color: #F0F0F0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+    z-index: 101;
+    pointer-events: auto;
+  }
+  .navbar-desktop a:hover {
+    color: #9DFF70;
+  }
+  .header-fechado-content {
+    gap: 0;
+  }
+  .logo-2002 {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .cd-button {
+    margin-left: 0;
+  }
+  .logo-cd-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-fechado-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+  .logo-2002 {
+    margin-right: 0;
+    font-size: 1.3rem;
+  }
+  .controles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+  .cd-button {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+  .menu-hamburguer {
+    margin-left: 0;
+  }
+  .navbar-desktop {
+    display: none !important;
+  }
+  .menu-hamburguer {
+    display: flex !important;
+  }
+  .header-aberto-content {
+    display: block;
+    width: 100%;
+    pointer-events: auto;
+  }
+  .navbar-aberta ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px 0 0 0;
+  }
+  .navbar-aberta li {
+    width: 100%;
+  }
+  .navbar-aberta a {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid #2a4d3b;
+  }
+  .navbar-aberta .action-item {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .close-item {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container.aberto {
+    padding: 0 15px;
+  }
+  .navbar-aberta ul {
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .navbar-aberta a {
+    font-size: 0.85rem;
+  }
+  .navbar-aberta .logo-item {
+    margin-left: 0;
+  }
+}

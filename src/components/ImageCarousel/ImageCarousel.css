@@ -1,0 +1,177 @@
+/* src/components/ImageCarousel/ImageCarousel.css - VERSÃO FINAL E CORRIGIDA */
+
+/* O container principal da seção inteira */
+.carousel-section-container {
+  background-color: #1e392a !important;
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 999 !important;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  flex: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image-frame {
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.carousel-image {
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  color: #F0F0F0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.carousel-image-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  color: #F0F0F0;
+  font-size: 6rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.carousel-next-button {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.carousel-next-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 4px solid #111;
+  border-right: 4px solid #111;
+  transform: rotate(-45deg);
+}
+
+/* Remover borda inferior do carrossel */
+.carousel-section-container {
+  border-bottom: none !important;
+}
+
+/* Responsividade para desktop */
+@media (min-width: 1024px) {
+  .carousel-section-container {
+    height: 80vh; /* Reduzindo a altura para desktop */
+    padding: 60px 0;
+  }
+  .carousel-image-frame {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #16281e;
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .carousel-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  .carousel-caption {
+    font-size: 1.3rem;
+    max-width: 1000px;
+    padding: 0 80px;
+  }
+  .carousel-image-overlay {
+    font-size: 8rem;
+    bottom: 60px;
+    left: 80px;
+  }
+  .carousel-next-button {
+    width: 40px;
+    height: 40px;
+    right: 50px;
+  }
+  .carousel-next-button::after {
+    border-bottom-width: 5px;
+    border-right-width: 5px;
+  }
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .carousel-section-container,
+  .carousel-wrapper,
+  .carousel-image-frame,
+  .carousel-image {
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+  }
+  .carousel-next-button {
+    right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+  .carousel-next-button::after {
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+  }
+}

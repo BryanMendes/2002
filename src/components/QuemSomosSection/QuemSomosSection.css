@@ -1,0 +1,124 @@
+/* QUEM SOMOS - Fiel ao design da imagem, alinhamento responsivo */
+
+.quem-somos-section.section-card {
+  background: #1E392A;
+  border: 2px solid #3A4C3A;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 auto 24px auto;
+  padding: 0;
+  max-width: 355px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.quem-somos-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #1E392A;
+  padding: 0 20px 0 20px;
+  height: 90px;
+  border-bottom: 2px solid #3A4C3A;
+  position: relative;
+}
+
+.quem-somos-main-text {
+  font-family: 'Montserrat', 'Montserrat ExtraBold', sans-serif;
+  font-size: 6.8rem;
+  font-weight: 900;
+  color: #F0F0C0;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-right: 12px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.quem-somos-rotated-text {
+  font-family: 'Montserrat', 'Montserrat ExtraBold', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #F0F0C0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-bottom: 0;
+  margin-top: -10px;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.quem-somos-paragraph {
+  color: #F0F0F0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: justify;
+  line-height: 1.25;
+  padding: 18px 18px 12px 18px;
+  margin: 0;
+}
+
+.quem-somos-stats {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #3A4C3A;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  height: 60px;
+  border-bottom: 2px solid #3A4C3A;
+}
+.stat-block:last-child {
+  border-bottom: none;
+}
+.stat-block p {
+  color: #F0F0F0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.1;
+  white-space: pre-line;
+}
+.stat-block span {
+  color: #F0F0C0;
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-left: 12px;
+  line-height: 1;
+}
+
+@media (max-width: 500px) {
+  .quem-somos-section.section-card {
+    max-width: 98vw;
+  }
+  .quem-somos-title-container {
+    height: 60px;
+    padding: 0 10px 0 10px;
+  }
+  .quem-somos-main-text {
+    font-size: 4.0rem;
+  }
+  .quem-somos-rotated-text {
+    font-size: 0.7rem;
+    margin-top: -6px;
+  }
+}
