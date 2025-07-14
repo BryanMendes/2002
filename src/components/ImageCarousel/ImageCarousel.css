@@ -67,7 +67,8 @@
   box-sizing: border-box;
   text-align: left;
   border-bottom: 1px solid rgba(240, 240, 240, 0.4);
-  padding-bottom: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .carousel-image-overlay {
