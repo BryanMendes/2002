@@ -102,8 +102,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-bottom: 4px solid #111;
-  border-right: 4px solid #111;
+  border-bottom: 4px solid #F0F0F0;
+  border-right: 4px solid #F0F0F0;
   transform: rotate(-45deg);
 }
 
@@ -153,8 +153,8 @@
     right: 50px;
   }
   .carousel-next-button::after {
-    border-bottom-width: 5px;
-    border-right-width: 5px;
+    border-bottom: 5px solid #F0F0F0;
+    border-right: 5px solid #F0F0F0;
   }
 }
 
@@ -178,7 +178,7 @@
     height: 24px;
   }
   .carousel-next-button::after {
-    border-bottom-width: 3px;
-    border-right-width: 3px;
+    border-bottom: 3px solid #F0F0F0;
+    border-right: 3px solid #F0F0F0;
   }
 }
