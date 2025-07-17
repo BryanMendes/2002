@@ -97,66 +97,12 @@
 .action-link-vertical span {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-<<<<<<< HEAD
-  display: inline-block;
-  font-size: 0.6em;
-  transform: rotate(180deg);
-}
-.action-link-large .action-link-main {
-  font-size: 2.2rem;
-  max-width: 260px;
-  min-width: 120px;
-}
-.action-link-large .action-link-row {
-  gap: 10px;
-}
-.action-link-large .parte-inline {
-  font-size: 0.55em;
-  margin-left: -15px;
-  margin-top: 18px;
-  line-height: 0.5;
-  height: 0.1em;
-}
-.action-link-large .action-link-bottom {
-  font-size: 1.2em;
-  margin-top: 8px;
-=======
   letter-spacing: 0.1em;
   text-align: center;
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
 }
 
 /* Mobile styles */
 @media (max-width: 1023px) {
-  .action-link-main {
-<<<<<<< HEAD
-    font-size: 0.9rem;
-  }
-  .action-link-right {
-    font-size: 0.7rem;
-    height: 26px;
-    margin-left: 6px;
-    padding-left: 6px;
-  }
-  .action-link-vertical {
-    font-size: 0.7rem;
-    height: 26px;
-    margin-left: 6px;
-    padding-left: 6px;
-  }
-  .action-link-large .action-link-main {
-    font-size: 1.1rem;
-    max-width: 120px;
-    min-width: 60px;
-  }
-  .action-link-large .parte-inline {
-    font-size: 0.62em;
-    margin-left: -12px;
-    margin-top: 10px;
-  }
-  .action-link-large .action-link-bottom {
-    font-size: 1em;
-    margin-top: 2px;
 =======
     font-size: 1.1rem;
   }
@@ -164,7 +110,6 @@
     font-size: 1.1rem;
     height: 40px;
     margin-left: 12px;
-    padding-left: 12px;
   }
 }
 

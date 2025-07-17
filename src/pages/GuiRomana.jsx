@@ -40,16 +40,12 @@ function GuiRomana() {
       <Link to="/" style={{
         position: 'absolute',
         top: '20px',
-        right: '20px',
+        left: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '2rem',
-<<<<<<< HEAD
-        zIndex: 2
-=======
         zIndex: 10,
         transform: 'scaleX(-1)'
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
       }}>
         ←
       </Link>
@@ -60,12 +56,7 @@ function GuiRomana() {
         borderRadius: '10px',
         maxWidth: '800px',
         lineHeight: '1.6',
-<<<<<<< HEAD
-        position: 'relative',
-        zIndex: 1
-=======
         transform: 'scaleX(-1)'
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
       }}>
         <h1 style={{fontSize: '3rem', marginBottom: '30px', color: '#F0F0C0'}}>gui romana</h1>
         <p style={{marginBottom: '20px', textAlign: 'justify'}}>
@@ -80,7 +71,7 @@ function GuiRomana() {
       <Link to="/ake" style={{
         position: 'absolute',
         bottom: '20px',
-        left: '20px',
+        right: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '1rem',

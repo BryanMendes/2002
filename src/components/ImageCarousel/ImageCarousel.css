@@ -102,15 +102,6 @@
 .carousel-next-button::after {
   content: '';
   position: absolute;
-<<<<<<< HEAD
-  top: 50%;
-  left: 50%;
-  width: 30px;
-  height: 30px;
-  border-bottom: 4px solid #111;
-  border-right: 4px solid #111;
-  transform: translate(-50%, -50%) rotate(-45deg);
-=======
   top: 0;
   left: 0;
   width: 100%;
@@ -118,7 +109,6 @@
   border-bottom: 4px solid #F0F0F0;
   border-right: 4px solid #F0F0F0;
   transform: rotate(-45deg);
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
 }
 
 /* Remover borda inferior do carrossel */
@@ -182,15 +172,8 @@
     right: 50px;
   }
   .carousel-next-button::after {
-<<<<<<< HEAD
-    width: 40px;
-    height: 40px;
-    border-bottom-width: 5px;
-    border-right-width: 5px;
-=======
     border-bottom: 5px solid #F0F0F0;
     border-right: 5px solid #F0F0F0;
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
   }
   .carousel-section-separator {
     margin-bottom: 60px;
@@ -223,14 +206,7 @@
     padding: 8px;
   }
   .carousel-next-button::after {
-<<<<<<< HEAD
-    width: 20px;
-    height: 20px;
-    border-bottom-width: 3px;
-    border-right-width: 3px;
-=======
     border-bottom: 3px solid #F0F0F0;
     border-right: 3px solid #F0F0F0;
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
   }
 }

@@ -11,7 +11,7 @@ function Ake() {
     {
       src: '/ake/9660a2589b5d2c1521104bcf8dbf3bf4e71fe4ad (1).png',
       //src: '/ake/0490eb6edd19ffc72b995491476beea78feedf45 (1).png',
-      legenda: 'Apresentação ao vivo no Ato “Chacina não! Federalização sim!” - Brasilândia, ZN',
+      legenda: 'Apresentação ao vivo no Ato "Chacina não! Federalização sim!" - Brasilândia, ZN',
     },
     {
       src: '/ake/fe710f0d908967b148fbc3c354fdb1f761e4d61d (1).png',
@@ -20,15 +20,15 @@ function Ake() {
     },
     {
       src: '/ake/73e460fae82568bcbc54cca5ce126addff842700 (1).png',
-      legenda: 'Apresentação na “Ocupação Preta” atividade realizada pelo educativo do CCBB com curadoria também de AKÉ',
+      legenda: 'Apresentação na "Ocupação Preta" atividade realizada pelo educativo do CCBB com curadoria também de AKÉ',
     },
     {
       src: '/ake/0490eb6edd19ffc72b995491476beea78feedf45 (1).png',
-      legenda: 'Fotos de divulgação de seu último lançamento musical “MONSTROS”',
+      legenda: 'Fotos de divulgação de seu último lançamento musical "MONSTROS"',
     },
     {
       src: '/ake/c4f1a41002a2edad741eee96aabe3f7e617f253f (1).png',
-      legenda: ' Na exposição “Encruzilhadas da Arte Afro Brasileira”',
+      legenda: ' Na exposição "Encruzilhadas da Arte Afro Brasileira"',
     },
   ];
 
@@ -84,43 +84,26 @@ function Ake() {
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-<<<<<<< HEAD
-          gap: '32px',
-=======
           gap: '24px',
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
           alignItems: 'center',
           marginTop: '32px',
         }}>
           {imagens.map((img, idx) => (
             <div key={idx} style={{
-<<<<<<< HEAD
-              // Removido o fundo verde e boxShadow
-              padding: 0,
-              maxWidth: '320px',
-=======
               background: 'rgba(30,57,42,0.95)',
               borderRadius: '12px',
               boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
               padding: '16px',
               width: '100%',
               maxWidth: '500px',
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              background: 'none',
-              boxShadow: 'none',
             }}>
               <img src={img.src} alt={img.legenda} style={{
-<<<<<<< HEAD
-                width: '320px',
-                height: '320px',
-=======
                 width: '100%',
                 height: 'auto',
                 maxHeight: '400px',
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
                 objectFit: 'cover',
                 borderRadius: '8px',
                 marginBottom: '12px',
@@ -152,4 +135,4 @@ function Ake() {
   );
 }
 
-export default Ake; 
+export default Ake;
