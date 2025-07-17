@@ -8,7 +8,15 @@ function GuiRomana() {
       display: 'flex', 
       alignItems: 'center', 
       justifyContent: 'center',
+<<<<<<< HEAD
       position: 'relative',
+=======
+      backgroundImage: 'url(/gui-back.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      transform: 'scaleX(-1)',
+>>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
       color: '#F0F0C0', 
       fontSize: '1.2rem',
       textAlign: 'center',
@@ -32,11 +40,16 @@ function GuiRomana() {
       <Link to="/" style={{
         position: 'absolute',
         top: '20px',
-        left: '20px',
+        right: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '2rem',
+<<<<<<< HEAD
         zIndex: 2
+=======
+        zIndex: 10,
+        transform: 'scaleX(-1)'
+>>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
       }}>
         ←
       </Link>
@@ -47,8 +60,12 @@ function GuiRomana() {
         borderRadius: '10px',
         maxWidth: '800px',
         lineHeight: '1.6',
+<<<<<<< HEAD
         position: 'relative',
         zIndex: 1
+=======
+        transform: 'scaleX(-1)'
+>>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
       }}>
         <h1 style={{fontSize: '3rem', marginBottom: '30px', color: '#F0F0C0'}}>gui romana</h1>
         <p style={{marginBottom: '20px', textAlign: 'justify'}}>
@@ -63,12 +80,13 @@ function GuiRomana() {
       <Link to="/ake" style={{
         position: 'absolute',
         bottom: '20px',
-        right: '20px',
+        left: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '1rem',
         textAlign: 'right',
-        zIndex: 10
+        zIndex: 10,
+        transform: 'scaleX(-1)'
       }}>
         <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
           <span>próximo</span>

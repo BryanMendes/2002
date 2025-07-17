@@ -5,6 +5,7 @@
   color: #F0F0F0;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+<<<<<<< HEAD
   font-size: 1rem;
   transition: color 0.2s;
   cursor: pointer;
@@ -15,15 +16,25 @@
 .action-link-bottom {
   color: #F0F0F0;
 }
+=======
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+>>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
 .action-link:hover {
   color: #9DFF70;
 }
+
 .action-link-main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   line-height: 0.9;
+<<<<<<< HEAD
   font-size: 1.05rem;
+=======
+>>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
   font-weight: 900;
   letter-spacing: -0.03em;
   height: 100%;
@@ -65,12 +76,19 @@
   height: 38px;
   text-align: center;
 }
+
 .action-link-vertical {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   margin-left: 0;
   padding-left: 0;
   font-size: 0.85rem;
+=======
+  border-left: 3px solid #9DFF70;
+  margin-left: 16px;
+  padding-left: 16px;
+>>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
   font-weight: 700;
   letter-spacing: 0.1em;
   height: 38px;
@@ -79,6 +97,7 @@
 .action-link-vertical span {
   writing-mode: vertical-rl;
   text-orientation: mixed;
+<<<<<<< HEAD
   display: inline-block;
   font-size: 0.6em;
   transform: rotate(180deg);
@@ -101,9 +120,16 @@
 .action-link-large .action-link-bottom {
   font-size: 1.2em;
   margin-top: 8px;
+=======
+  letter-spacing: 0.1em;
+  text-align: center;
+>>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
 }
-@media (max-width: 600px) {
+
+/* Mobile styles */
+@media (max-width: 1023px) {
   .action-link-main {
+<<<<<<< HEAD
     font-size: 0.9rem;
   }
   .action-link-right {
@@ -131,5 +157,27 @@
   .action-link-large .action-link-bottom {
     font-size: 1em;
     margin-top: 2px;
+=======
+    font-size: 1.1rem;
+  }
+  .action-link-vertical {
+    font-size: 1.1rem;
+    height: 40px;
+    margin-left: 12px;
+    padding-left: 12px;
+  }
+}
+
+/* Desktop styles - match other header items */
+@media (min-width: 1024px) {
+  .action-link-main {
+    font-size: 1.3rem;
+  }
+  .action-link-vertical {
+    font-size: 1.3rem;
+    height: 50px;
+    margin-left: 16px;
+    padding-left: 16px;
+>>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
   }
 }

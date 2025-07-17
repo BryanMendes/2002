@@ -252,14 +252,12 @@
     height: 36px;
     margin: 0;
   }
-  .menu-hamburguer {
-    margin-left: 0;
-  }
   .navbar-desktop {
-    display: none !important;
+    display: none;
   }
   .menu-hamburguer {
-    display: flex !important;
+    display: flex;
+    margin-left: 0;
   }
   .header-aberto-content {
     display: block;
