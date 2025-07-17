@@ -8,15 +8,7 @@ function GuiRomana() {
       display: 'flex', 
       alignItems: 'center', 
       justifyContent: 'center',
-<<<<<<< HEAD
       position: 'relative',
-=======
-      backgroundImage: 'url(/gui-back.png)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      transform: 'scaleX(-1)',
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
       color: '#F0F0C0', 
       fontSize: '1.2rem',
       textAlign: 'center',
