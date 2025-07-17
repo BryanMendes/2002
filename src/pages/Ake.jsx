@@ -84,26 +84,24 @@ function Ake() {
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '24px',
+          gap: '32px',
           alignItems: 'center',
           marginTop: '32px',
         }}>
           {imagens.map((img, idx) => (
             <div key={idx} style={{
-              background: 'rgba(30,57,42,0.95)',
-              borderRadius: '12px',
-              boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
-              padding: '16px',
-              width: '100%',
-              maxWidth: '500px',
+              // Removido o fundo verde e boxShadow
+              padding: 0,
+              maxWidth: '320px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              background: 'none',
+              boxShadow: 'none',
             }}>
               <img src={img.src} alt={img.legenda} style={{
-                width: '100%',
-                height: 'auto',
-                maxHeight: '400px',
+                width: '320px',
+                height: '320px',
                 objectFit: 'cover',
                 borderRadius: '8px',
                 marginBottom: '12px',
@@ -135,4 +133,4 @@ function Ake() {
   );
 }
 
-export default Ake;
+export default Ake; 
