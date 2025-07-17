@@ -84,28 +84,15 @@ function Ake() {
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-<<<<<<< HEAD
           gap: '32px',
-=======
-          gap: '24px',
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
           alignItems: 'center',
           marginTop: '32px',
         }}>
           {imagens.map((img, idx) => (
             <div key={idx} style={{
-<<<<<<< HEAD
               // Removido o fundo verde e boxShadow
               padding: 0,
               maxWidth: '320px',
-=======
-              background: 'rgba(30,57,42,0.95)',
-              borderRadius: '12px',
-              boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
-              padding: '16px',
-              width: '100%',
-              maxWidth: '500px',
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -113,14 +100,8 @@ function Ake() {
               boxShadow: 'none',
             }}>
               <img src={img.src} alt={img.legenda} style={{
-<<<<<<< HEAD
                 width: '320px',
                 height: '320px',
-=======
-                width: '100%',
-                height: 'auto',
-                maxHeight: '400px',
->>>>>>> 801a3d679366ccc2fc9c2a690e3a49e48e3b7d82
                 objectFit: 'cover',
                 borderRadius: '8px',
                 marginBottom: '12px',
