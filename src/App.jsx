@@ -14,6 +14,10 @@ import Fotografia from './pages/Fotografia.jsx';
 import Pintura from './pages/Pintura.jsx';
 import DoisMilEDois from './pages/DoisMilEDois.jsx';
 import PuroSomPage from './pages/PuroSomPage.jsx';
+import Loja from './pages/Loja.jsx';
+import Bianca from './pages/Bianca.jsx';
+import Renata from './pages/Renata.jsx';
+import Podcast from './pages/Podcast.jsx';
 
 function App() {
   const location = useLocation();
@@ -82,6 +86,10 @@ function App() {
         <Route path="/pintura" element={<Pintura />} />
         <Route path="/2002" element={<DoisMilEDois />} />
         <Route path="/puro-som" element={<PuroSomPage />} />
+        <Route path="/loja" element={<Loja />} />
+        <Route path="/bianca" element={<Bianca />} />
+        <Route path="/renata" element={<Renata />} />
+        <Route path="/podcast" element={<Podcast />} />
       </Routes>
       {shouldShowHeaderFooter && <Footer />}
     </>

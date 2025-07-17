@@ -34,7 +34,6 @@ function Home() {
       <QuemSomosSection />
       <hr className="section-separator" />
       <ImageCarousel slides={creatorSlides} />
-      <hr className="section-separator" />
       <PuroSomSection />
       <hr className="section-separator" />
       {/* Não adicionar <hr> após NossaArteSection pois ela já tem linha interna */}

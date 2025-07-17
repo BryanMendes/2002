@@ -24,7 +24,7 @@ function PuroSomPage() {
           <p>Prepare-se para embarcar em uma viagem musical única, onde cada faixa conta uma história e cada programa é feito com paixão e dedicação.</p>
         </div>
       </main>
-      <button className="play-button-footer" aria-label="Play">
+      <button className="play-button-footer" aria-label="Play" onClick={() => navigate('/podcast')}>
         &#9654;
       </button>
     </div>

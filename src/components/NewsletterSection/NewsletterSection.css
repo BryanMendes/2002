@@ -16,6 +16,11 @@
     font-size: 0.9rem;
     margin-bottom: 30px;
   }
+  .newsletter-section,
+.newsletter-section h4,
+.newsletter-section p {
+  color: #F0F0F0;
+}
   .input-wrapper input {
     background: transparent;
     border: 2px solid #F0F0F0;

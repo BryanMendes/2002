@@ -73,6 +73,15 @@
     font-size: 1rem;
   }
 
+.archives-video-block,
+.archives-overlay h2,
+.archives-overlay button,
+.archives-paragraph,
+.saiba-mais-button {
+  color: #F0F0F0;
+  border-color: #F0F0F0;
+}
+
 /* Responsividade para desktop */
 @media (min-width: 1024px) {
   .archives-video-block {

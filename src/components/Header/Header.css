@@ -29,7 +29,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  color: white;
+  color: #F0F0F0;
 }
 .logo-2002 {
   font-size: 1.5rem;
@@ -269,7 +269,7 @@
   .navbar-aberta ul {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 40px;
     padding: 30px 0 0 0;
   }
   .navbar-aberta li {
@@ -284,6 +284,8 @@
   .navbar-aberta .action-item {
     width: 100%;
     margin-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .close-item {
     margin-left: 0;
@@ -307,4 +309,44 @@
   .navbar-aberta .logo-item {
     margin-left: 0;
   }
+}
+
+/* Removidas as regras abaixo para padronizar o ActionButton em todo o site:
+.header-container .action-link { font-size: 0.8rem; }
+.header-container .action-link-main { font-size: 1rem; }
+.header-container .action-link-vertical { font-size: 0.5rem; height: 28px; }
+.header-container .action-link-vertical span { font-size: 0.5em; }
+*/
+.header-fechado-content,
+.logo-2002,
+.navbar-desktop a,
+.navbar-aberta a,
+.navbar-desktop button,
+.navbar-aberta button {
+  color: #F0F0F0 !important;
+}
+
+.navbar-desktop a:visited,
+.navbar-aberta a:visited,
+.navbar-desktop button:visited,
+.navbar-aberta button:visited {
+  color: #F0F0F0 !important;
+}
+
+.navbar-desktop a:active,
+.navbar-aberta a:active,
+.navbar-desktop button:active,
+.navbar-aberta button:active {
+  color: #F0F0F0 !important;
+}
+
+.header-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.header-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s;
 }

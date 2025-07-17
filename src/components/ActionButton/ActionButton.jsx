@@ -6,11 +6,11 @@ function ActionButton({ onClick }) {
   return (
     <Link to="/venha-fazer-parte" className="action-link" onClick={onClick}>
       <div className="action-link-main">
-        <div>VENHA</div>
-        <div>FAZER</div>
-      </div>
-      <div className="action-link-vertical">
-        PARTE
+        <div className="action-link-row">
+          <span>VENHA</span>
+          <span className="parte-inline">PARTE</span>
+        </div>
+        <div className="action-link-bottom">FAZER</div>
       </div>
     </Link>
   );

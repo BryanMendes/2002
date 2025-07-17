@@ -59,6 +59,7 @@ function ImageCarousel({ slides = [] }) {
           {slides[currentIndex].captionText}
         </p>
       )}
+      <hr className="carousel-section-separator" />
     </section>
   );
 }

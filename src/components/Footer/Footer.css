@@ -63,6 +63,13 @@
   color: #9DFF70;
 }
 
+.footer-section,
+.footer-logo,
+.footer-column h5,
+.footer-column a {
+  color: #F0F0F0;
+}
+
 @media (min-width: 1024px) {
   .footer-section {
     padding: 120px 80px;

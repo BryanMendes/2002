@@ -6,21 +6,16 @@ import './NossaArteSection.css';
 const nossaArteSlides = [
   {
     imageSrc: '/imagem-nossa-arte-1.png',
-    link: '/ake',
-    // Este carrossel não tem overlay nem caption, então deixamos em branco ou removemos
+    link: '/2002',
   },
   {
     imageSrc: '/imagem-nossa-arte-2.png',
-    link: '/rfmees',
-    // Este carrossel não tem overlay nem caption, então deixamos em branco ou removemos
+    link: '/renata',
   },
   {
     imageSrc: '/imagem-nossa-arte-3.png',
-    link: '/gui-romana',
-    // Este carrossel não tem overlay nem caption, então deixamos em branco ou removemos
+    link: '/bianca',
   },
-  // Se tivesse mais imagens, adicionaria aqui...
-  // { imageSrc: '/imagem-nossa-arte-2.jpg' } 
 ];
 
 function NossaArteSection() {

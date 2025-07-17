@@ -4,28 +4,31 @@ import { Link } from 'react-router-dom';
 function Ake() {
   const imagens = [
     {
-      src: '/ake/c4f1a41002a2edad741eee96aabe3f7e617f253f (1).png',
-      legenda: 'Aké em momento de criação artística',
-    },
-    {
-      src: '/ake/0490eb6edd19ffc72b995491476beea78feedf45 (1).png',
-      legenda: 'Detalhe do processo de pintura',
-    },
-    {
-      src: '/ake/73e460fae82568bcbc54cca5ce126addff842700 (1).png',
-      legenda: 'Obra finalizada por Aké',
-    },
-    {
-      src: '/ake/fe710f0d908967b148fbc3c354fdb1f761e4d61d (1).png',
-      legenda: 'Aké em exposição coletiva',
+      //src: '/ake/c4f1a41002a2edad741eee96aabe3f7e617f253f (1).png',
+      src: '/ake/b2d1239dcb021f62b7c2af35aed6e5c382480b91 (1).png',
+      legenda: 'Em Campinas com o produtor Granadeiro Guimarães.',
     },
     {
       src: '/ake/9660a2589b5d2c1521104bcf8dbf3bf4e71fe4ad (1).png',
-      legenda: 'Trabalho em andamento no ateliê',
+      //src: '/ake/0490eb6edd19ffc72b995491476beea78feedf45 (1).png',
+      legenda: 'Apresentação ao vivo no Ato “Chacina não! Federalização sim!” - Brasilândia, ZN',
     },
     {
-      src: '/ake/b2d1239dcb021f62b7c2af35aed6e5c382480b91 (1).png',
-      legenda: 'Aké e sua paleta de cores',
+      src: '/ake/fe710f0d908967b148fbc3c354fdb1f761e4d61d (1).png',
+      //src: '/ake/73e460fae82568bcbc54cca5ce126addff842700 (1).png',
+      legenda: 'No CCBB com a presidente do Banco do Brasil, Tarciana Medeiros e o gerente do Centro Cultural Claudio Mattos Brito',
+    },
+    {
+      src: '/ake/73e460fae82568bcbc54cca5ce126addff842700 (1).png',
+      legenda: 'Apresentação na “Ocupação Preta” atividade realizada pelo educativo do CCBB com curadoria também de AKÉ',
+    },
+    {
+      src: '/ake/0490eb6edd19ffc72b995491476beea78feedf45 (1).png',
+      legenda: 'Fotos de divulgação de seu último lançamento musical “MONSTROS”',
+    },
+    {
+      src: '/ake/c4f1a41002a2edad741eee96aabe3f7e617f253f (1).png',
+      legenda: ' Na exposição “Encruzilhadas da Arte Afro Brasileira”',
     },
   ];
 
@@ -36,10 +39,11 @@ function Ake() {
       flexDirection: 'column',
       alignItems: 'center', 
       justifyContent: 'center',
-      backgroundImage: 'url(/ake-back.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundImage: window.innerWidth <= 600 ? 'url(/ake-back2.jpg)' : 'url(/ake-back.jpg)',
+      backgroundSize: window.innerWidth <= 600 ? 'contain' : 'cover',
+      backgroundPosition: window.innerWidth <= 600 ? 'top center' : 'center',
       backgroundRepeat: 'no-repeat',
+      backgroundColor: window.innerWidth <= 600 ? '#000' : '#1E392A',
       color: '#F0F0C0', 
       fontSize: '1.2rem',
       textAlign: 'center',
@@ -79,26 +83,25 @@ function Ake() {
         {/* Galeria de imagens */}
         <div style={{
           display: 'flex',
-          flexWrap: 'wrap',
+          flexDirection: 'column',
           gap: '32px',
-          justifyContent: 'center',
+          alignItems: 'center',
           marginTop: '32px',
         }}>
           {imagens.map((img, idx) => (
             <div key={idx} style={{
-              background: 'rgba(30,57,42,0.95)',
-              borderRadius: '12px',
-              boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
-              padding: '16px',
+              // Removido o fundo verde e boxShadow
+              padding: 0,
               maxWidth: '320px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              background: 'none',
+              boxShadow: 'none',
             }}>
               <img src={img.src} alt={img.legenda} style={{
-                width: '100%',
-                maxWidth: '280px',
-                maxHeight: '280px',
+                width: '320px',
+                height: '320px',
                 objectFit: 'cover',
                 borderRadius: '8px',
                 marginBottom: '12px',

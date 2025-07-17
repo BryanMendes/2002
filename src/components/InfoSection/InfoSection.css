@@ -1,7 +1,7 @@
 .info-section {
     background-color: #1E392A;
     color: #F0F0F0;
-    padding: 60px 20px;
+    padding: 0 20px 60px 20px;
     text-align: center;
   }
   
@@ -11,6 +11,8 @@
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 30px;
+    display: block;
+    width: 100%;
   }
   
   .info-image-container {
@@ -65,7 +67,7 @@
   /* Responsividade para desktop */
   @media (min-width: 1024px) {
     .info-section {
-      padding: 100px 80px;
+      padding: 0 80px 100px 80px;
     }
     
     .info-title {
@@ -74,7 +76,17 @@
     }
     
     .info-image-container {
-      max-width: 700px;
+      max-width: 540px;
+      height: 400px;
+    }
+    .info-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      margin: 0;
+      padding: 0;
     }
     
     .info-image-text {
@@ -93,12 +105,29 @@
   @media (max-width: 768px) {
     .info-title {
       font-size: 3rem;
+      display: block;
+      width: 100%;
     }
     .info-image-text {
       font-size: 2.5rem;
     }
     
     .info-section {
-      padding: 40px 20px;
+      padding: 0 20px 40px 20px;
+    }
+    .info-image-container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      left: unset;
+      right: unset;
+      transform: none;
     }
   }
+
+.info-section,
+.info-title,
+.info-image-text,
+.info-paragraph {
+  color: #F0F0F0;
+}

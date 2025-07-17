@@ -1,11 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ActionButton from '../ActionButton/ActionButton';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
-  const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+  const [isDesktop, setIsDesktop] = useState(window.matchMedia('(min-width: 1024px)').matches);
+  const [showHeader, setShowHeader] = useState(!isDesktop);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const handleResize = () => {
+      setIsDesktop(mediaQuery.matches);
+      setShowHeader(!mediaQuery.matches); // mobile: sempre mostra
+    };
+    mediaQuery.addEventListener('change', handleResize);
+    return () => mediaQuery.removeEventListener('change', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) {
+      setShowHeader(true);
+      return;
+    }
+    const handleMouseMove = (e) => {
+      if (e.clientY < 60) {
+        setShowHeader(true);
+      } else {
+        setShowHeader(false);
+      }
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [isDesktop]);
 
   const fecharMenu = (e) => {
     if (e) e.preventDefault();
@@ -17,7 +44,7 @@ function Header() {
   }
 
   return (
-    <header className={`header-container ${menuAberto ? 'aberto' : 'fechado'}`}>
+    <header className={`header-container ${menuAberto ? 'aberto' : 'fechado'}${showHeader ? ' header-visible' : ' header-hidden'}`}>
       <div className="header-fechado-content">
         <div className="logo-cd-group">
           <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
@@ -54,6 +81,7 @@ function Header() {
               <li className="action-item">
                 <ActionButton />
               </li>
+              <li><Link to="/loja">LOJA</Link></li>
             </ul>
           </nav>
         )}
@@ -66,6 +94,7 @@ function Header() {
               <li><Link to="/" onClick={() => handleLinkClick('/')}>INÍCIO</Link></li>
               <li><Link to="/artigos" onClick={() => handleLinkClick('/artigos')}>ARTIGOS</Link></li>
               <li><Link to="/apoia-se" onClick={() => handleLinkClick('/apoia-se')}>APOIA-SE</Link></li>
+              <li><Link to="/loja" onClick={() => handleLinkClick('/loja')}>LOJA</Link></li>
               <li className="action-item">
                 <ActionButton onClick={() => handleLinkClick('/venha-fazer-parte')} />
               </li>
