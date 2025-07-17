@@ -1,35 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import ActionButton from '../ActionButton/ActionButton';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { useScrollPosition } from '../../hooks/useScrollPosition';
+import { BREAKPOINTS, NAV_ITEMS } from '../../utils/constants';
 import './Header.css';
 
 function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(window.matchMedia('(min-width: 1024px)').matches);
+  const isDesktop = useMediaQuery(BREAKPOINTS.desktop);
   const [showHeader, setShowHeader] = useState(!isDesktop);
+  const [mouseY, setMouseY] = useState(0);
 
+  // Atualizar showHeader quando isDesktop mudar
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 1024px)');
-    const handleResize = () => {
-      setIsDesktop(mediaQuery.matches);
-      setShowHeader(!mediaQuery.matches); // mobile: sempre mostra
-    };
-    mediaQuery.addEventListener('change', handleResize);
-    return () => mediaQuery.removeEventListener('change', handleResize);
-  }, []);
+    setShowHeader(!isDesktop);
+  }, [isDesktop]);
 
   useEffect(() => {
     if (!isDesktop) {
       setShowHeader(true);
       return;
     }
+    
     const handleMouseMove = (e) => {
+      setMouseY(e.clientY);
       if (e.clientY < 60) {
         setShowHeader(true);
       } else {
         setShowHeader(false);
       }
     };
+    
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [isDesktop]);
@@ -75,13 +77,14 @@ function Header() {
         {isDesktop && (
           <nav className="navbar-desktop">
             <ul>
-              <li><Link to="/">INÍCIO</Link></li>
-              <li><Link to="/artigos">ARTIGOS</Link></li>
-              <li><Link to="/apoia-se">APOIA-SE</Link></li>
+              {NAV_ITEMS.map(item => (
+                <li key={item.path}>
+                  <Link to={item.path}>{item.label}</Link>
+                </li>
+              ))}
               <li className="action-item">
                 <ActionButton />
               </li>
-              <li><Link to="/loja">LOJA</Link></li>
             </ul>
           </nav>
         )}
@@ -91,10 +94,13 @@ function Header() {
         <div className="header-aberto-content" style={{ display: menuAberto ? 'block' : 'none' }}>
           <nav className="navbar-aberta">
             <ul>
-              <li><Link to="/" onClick={() => handleLinkClick('/')}>INÍCIO</Link></li>
-              <li><Link to="/artigos" onClick={() => handleLinkClick('/artigos')}>ARTIGOS</Link></li>
-              <li><Link to="/apoia-se" onClick={() => handleLinkClick('/apoia-se')}>APOIA-SE</Link></li>
-              <li><Link to="/loja" onClick={() => handleLinkClick('/loja')}>LOJA</Link></li>
+              {NAV_ITEMS.map(item => (
+                <li key={item.path}>
+                  <Link to={item.path} onClick={() => handleLinkClick(item.path)}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
               <li className="action-item">
                 <ActionButton onClick={() => handleLinkClick('/venha-fazer-parte')} />
               </li>

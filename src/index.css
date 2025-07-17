@@ -2,6 +2,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
 
+/* Otimizações de performance */
+* {
+  box-sizing: border-box;
+}
+
+/* Preload de fontes críticas */
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-display: swap;
+}
+
 /* Este é o reset mais importante. 
   Ele garante que a página, o corpo dela e o container do React 
   ocupem todo o espaço disponível, sem margens ou paddings.
@@ -13,6 +31,8 @@ html, body, #root {
   height: 100%;
   /* Bónus: previne scroll horizontal acidental */
   overflow-x: hidden; 
+  /* Otimização de scroll */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,12 +41,21 @@ body {
   color: #F0F0C0;
 }
 
-/* Esta regra continua importante para o cálculo de tamanhos 
-  de todos os elementos.
-*/
-* {
-  box-sizing: border-box;
-  color: #F0F0C0;
+/* Otimizações de renderização */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Melhorar performance de animações */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Z-index stacking context - ensure proper layering */
