@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import LazyImage from '../LazyImage/LazyImage';
 import './ImageCarousel.css';
 
 function ImageCarousel({ slides = [] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     const newIndex = (currentIndex + 1) % slides.length;
     setCurrentIndex(newIndex);
-  };
+  }, [currentIndex, slides.length]);
+
+  const currentSlide = useMemo(() => slides[currentIndex], [slides, currentIndex]);
 
   if (slides.length === 0) {
     return null;
@@ -25,7 +28,7 @@ function ImageCarousel({ slides = [] }) {
             <div key={index} className="carousel-image-frame">
               {slide.link ? (
                 <Link to={slide.link} style={{textDecoration: 'none', color: 'inherit', display: 'block', width: '100%', height: '100%'}}>
-                  <img 
+                  <LazyImage 
                     src={slide.imageSrc} 
                     alt={slide.overlayText || ''} 
                     className="carousel-image"
@@ -36,7 +39,7 @@ function ImageCarousel({ slides = [] }) {
                 </Link>
               ) : (
                 <>
-                  <img 
+                  <LazyImage 
                     src={slide.imageSrc} 
                     alt={slide.overlayText || ''} 
                     className="carousel-image"
@@ -54,9 +57,9 @@ function ImageCarousel({ slides = [] }) {
         )}
       </div>
       
-      {slides[currentIndex].captionText && (
+      {currentSlide?.captionText && (
         <p className="carousel-caption">
-          {slides[currentIndex].captionText}
+          {currentSlide.captionText}
         </p>
       )}
       <hr className="carousel-section-separator" />
