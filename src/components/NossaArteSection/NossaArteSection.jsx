@@ -18,9 +18,9 @@ const nossaArteSlides = [
   },
 ];
 
-function NossaArteSection() {
+function NossaArteSection({ id }) {
   return (
-    <section className="nossa-arte-section section-card">
+    <section id={id} className="nossa-arte-section section-card">
       <h2 className="nossa-arte-title">
         <div>NOSSA</div>
         <div>ARTE</div>

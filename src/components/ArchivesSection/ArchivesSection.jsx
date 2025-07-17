@@ -19,7 +19,7 @@ function ArchivesSection() {
       </div>
       {/* Bloco com o conteúdo de texto e botões */}
       <div className="archives-cta-block">
-        <ActionButton />
+        <ActionButton extraClass="action-link-large" />
         <p className="archives-paragraph">
           EM UM MUNDO SATURADO DE ARTE DE MASSA, A 2002 É O ESPAÇO ONDE ARTISTAS INDEPENDENTES GANHAM VOZ E RECONHECIMENTO. AQUI, A CRIATIVIDADE NÃO TEM LIMITES, E CADA OBRA TEM UM ESPAÇO ÚNICO PARA BRILHAR. SE VOCÊ É UM ARTISTA QUE DESEJA SE CONECTAR COM UMA AUDIÊNCIA APAIXONADA, OU ALGUÉM EM BUSCA DE ARTE AUTÊNTICA E INOVADORA, VOCÊ ESTÁ NO LUGAR CERTO.
         </p>

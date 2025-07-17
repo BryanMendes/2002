@@ -83,6 +83,25 @@
   font-size: 0.6em;
   transform: rotate(180deg);
 }
+.action-link-large .action-link-main {
+  font-size: 2.2rem;
+  max-width: 260px;
+  min-width: 120px;
+}
+.action-link-large .action-link-row {
+  gap: 10px;
+}
+.action-link-large .parte-inline {
+  font-size: 0.55em;
+  margin-left: -15px;
+  margin-top: 18px;
+  line-height: 0.5;
+  height: 0.1em;
+}
+.action-link-large .action-link-bottom {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
 @media (max-width: 600px) {
   .action-link-main {
     font-size: 0.9rem;
@@ -98,5 +117,19 @@
     height: 26px;
     margin-left: 6px;
     padding-left: 6px;
+  }
+  .action-link-large .action-link-main {
+    font-size: 1.1rem;
+    max-width: 120px;
+    min-width: 60px;
+  }
+  .action-link-large .parte-inline {
+    font-size: 0.62em;
+    margin-left: -12px;
+    margin-top: 10px;
+  }
+  .action-link-large .action-link-bottom {
+    font-size: 1em;
+    margin-top: 2px;
   }
 }

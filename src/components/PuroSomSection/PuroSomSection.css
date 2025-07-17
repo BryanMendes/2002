@@ -24,7 +24,8 @@
 }
 @media (min-width: 1024px) {
   .puro-som-section.section-card {
-    padding-top: 300px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
@@ -88,7 +89,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 16px;
+  margin-left: 30px;
+  text-align: center;
 }
 
 .puro-som-button {

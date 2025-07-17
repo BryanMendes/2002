@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ActionButton.css';
 
-function ActionButton({ onClick }) {
+function ActionButton({ onClick, extraClass = '' }) {
   return (
-    <Link to="/venha-fazer-parte" className="action-link" onClick={onClick}>
+    <Link to="/venha-fazer-parte" className={`action-link${extraClass ? ' ' + extraClass : ''}`} onClick={onClick}>
       <div className="action-link-main">
         <div className="action-link-row">
           <span>VENHA</span>

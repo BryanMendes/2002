@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './PuroSomPage.css';
 
 function PuroSomPage() {
+  useEffect(() => {
+    document.title = '2002';
+  }, []);
   const navigate = useNavigate();
 
   return (
@@ -15,7 +18,10 @@ function PuroSomPage() {
       <main className="puro-som-page-main">
         <h1 className="puro-som-page-title">
           <div>PURO</div>
-          <div>SOM<span className="green-dot">.</span></div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.3em' }}>
+            SOM
+            <img src="/gif-1.gif" alt="CD animado" style={{ width: '1.2em', height: '1.2em', marginLeft: '0.1em', verticalAlign: 'middle' }} />
+          </div>
         </h1>
         <p className="puro-som-page-subtitle">A NOSTALGIA DA RÁDIO FM...</p>
         <div className="puro-som-page-body">
@@ -25,7 +31,7 @@ function PuroSomPage() {
         </div>
       </main>
       <button className="play-button-footer" aria-label="Play" onClick={() => navigate('/podcast')}>
-        &#9654;
+        <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>&#9654;</span>
       </button>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
 import './QuemSomosSection.css';
 
-function QuemSomosSection() {
+function QuemSomosSection({ id }) {
   return (
-    <section className="quem-somos-section section-card">
+    <section id={id} className="quem-somos-section section-card">
       <div className="quem-somos-title-container">
         <div className="quem-somos-main-text">QUEM</div>
         <div className="quem-somos-rotated-text">SOMOS</div>

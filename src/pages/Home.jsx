@@ -31,26 +31,28 @@ function Home() {
     <>
       <Hero />
       <hr className="section-separator" />
-      <QuemSomosSection />
+      <QuemSomosSection id="quem-somos" />
       <hr className="section-separator" />
       <ImageCarousel slides={creatorSlides} />
       <PuroSomSection />
       <hr className="section-separator" />
       {/* Não adicionar <hr> após NossaArteSection pois ela já tem linha interna */}
-      <NossaArteSection />
+      <NossaArteSection id="nossa-arte" />
       {/* <hr className="section-separator" /> REMOVIDO */}
       <InfoSection 
+        id="novidade-semanal"
         title="NOVIDADE SEMANAL"
         imageSrc="/image-2.png"
         imageText="AKÉ"
-        paragraphText="EM UM MUNDO SATURADO DE ARTE DE MASSA, A 2002 É O ESPAÇO ONDE ARTISTAS INDEPENDENTES GANHAM VOZ E RECONHECIMENTO. AQUI, A CRIATIVIDADE NÃO TEM LIMITES..."
+        paragraphText="Em um mundo saturado de arte de massa, a 2002 é o espaço onde artistas independentes ganham voz e reconhecimento. Aqui, a criatividade não tem limites, e cada obra tem um espaço único para brilhar. Se você é um artista que deseja se conectar com uma audiência apaixonada, ou alguém em busca de arte autêntica e inovadora, você está no lugar certo."
       />
       <hr className="section-separator" />
       <InfoSection 
+        id="artigos"
         title="ARTIGOS"
         imageSrc="/imagem-3.png"
         imageText="ARTE"
-        paragraphText="RENATA MARTINELLI É ARTISTA VISUAL E CURADORA INDEPENDENTE, MOTORIZADORA DA ARTE E PSICOCULTURA. DESENVOLVE PESQUISAS RELACIONADAS AO CORPO FEMININO..."
+        paragraphText="Renata Martinelli é Artista Visual e Curadora Independente, Historiadora da Arte e Pesquisadora. Desenvolve pesquisas relacionadas ao corpo feminino, memória, território e processos criativos."
       />
       <hr className="section-separator" />
       <ArchivesSection />
