@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 
 function ApoiaSe() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [copied, setCopied] = useState(false); // novo estado para feedback
+  const email = 'platfrm.2002@gmail.com';
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   return (
     <div style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#1E392A', color: '#F0F0C0', padding: '40px 20px' }}>
       <h1 style={{ fontSize: '3rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '32px' }}>Apoia-se</h1>
@@ -44,8 +52,24 @@ function ApoiaSe() {
               Você pode contribuir com o valor que desejar. Todo apoio é fundamental para mantermos a 2002 viva e expandindo a arte independente no Brasil!
             </p>
             <img src="/qrcode.jpeg" alt="QR Code Apoia-se" style={{ width: '180px', height: '180px', margin: '0 auto 12px auto', display: 'block', borderRadius: '8px', background: '#fff' }} />
-            <div style={{ fontSize: '1.1rem', color: '#9DFF70', fontWeight: 700, marginBottom: '18px' }}>
-              chave: platfrm.2002@gmail.com
+            <div style={{ fontSize: '1.1rem', color: '#9DFF70', fontWeight: 700, marginBottom: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+              chave: {email}
+              <button
+                onClick={handleCopy}
+                style={{
+                  background: '#F0F0C0',
+                  color: '#1E392A',
+                  border: 'none',
+                  borderRadius: '4px',
+                  padding: '4px 10px',
+                  fontWeight: 700,
+                  fontSize: '0.95rem',
+                  cursor: 'pointer',
+                  marginLeft: '8px'
+                }}
+              >
+                {copied ? 'Copiado!' : 'Copiar'}
+              </button>
             </div>
             <button
               style={{
