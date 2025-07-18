@@ -114,6 +114,18 @@
   line-height: 1;
 }
 
+.arte-nao-e-hobbie {
+  display: block;
+  margin-top: 18px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #F0F0C0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
 @media (max-width: 800px) {
   .quem-somos-paragraph {
     font-size: 1rem;
