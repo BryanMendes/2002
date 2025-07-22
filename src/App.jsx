@@ -2,7 +2,7 @@ import './App.css'
 import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, useRef, Suspense, lazy } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { NO_HEADER_FOOTER_PAGES } from './utils/constants';
 import Home from './pages/Home.jsx';
 
@@ -38,29 +38,28 @@ function LoadingSpinner() {
   );
 }
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-}
-
 function App() {
   const location = useLocation();
   
   // Pages that should not have header and footer
   const shouldShowHeaderFooter = !NO_HEADER_FOOTER_PAGES.includes(location.pathname);
 
-  // Always scroll to top when changing pages
+  // Force scroll to top on every route change
   useEffect(() => {
-    // Always scroll to top when navigating to any page
-    window.scrollTo(0, 0);
+    // Use setTimeout to ensure it runs after React has updated the DOM
+    const timer = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
     <>
-      <ScrollToTop />
       {shouldShowHeaderFooter && <Header />}
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
