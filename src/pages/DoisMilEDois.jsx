@@ -8,17 +8,17 @@ function DoisMilEDois() {
       {/* Botão de voltar */}
       <button onClick={() => window.history.back()} style={{
         position: 'absolute',
-        top: '80px',
-        left: '20px',
+        top: '120px',
+        left: '30px',
         color: '#F0F0C0',
         textDecoration: 'none',
-        fontSize: '2rem',
+        fontSize: '2.5rem',
         zIndex: 10,
         background: 'none',
         border: 'none',
         outline: 'none',
         boxShadow: 'none',
-        cursor: 'default'
+        cursor: 'pointer'
       }}>
         ←
       </button>

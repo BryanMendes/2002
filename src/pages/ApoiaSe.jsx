@@ -13,7 +13,21 @@ function ApoiaSe() {
   return (
     <div style={{ minHeight: '100vh', background: '#1E392A', color: '#F0F0C0', position: 'relative', padding: '40px 20px', paddingTop: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       {/* Seta de voltar */}
-      <button onClick={() => window.location.href = '/'} style={{ position: 'absolute', top: '48px', left: '32px', color: '#F0F0C0', background: 'none', border: 'none', outline: 'none', boxShadow: 'none', textDecoration: 'none', fontSize: '4rem', fontWeight: 900, zIndex: 10 }}>&lt;</button>
+      <button onClick={() => window.history.back()} style={{ 
+        position: 'absolute', 
+        top: '120px', 
+        left: '30px', 
+        color: '#F0F0C0', 
+        background: 'none', 
+        border: 'none', 
+        outline: 'none', 
+        boxShadow: 'none', 
+        textDecoration: 'none', 
+        fontSize: '2.5rem', 
+        fontWeight: 900, 
+        zIndex: 10,
+        cursor: 'pointer'
+      }}>←</button>
       <h1 style={{ fontSize: '3rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '32px' }}>Apoia-se</h1>
       <p style={{ maxWidth: 600, fontSize: '1.2rem', textAlign: 'center', lineHeight: 1.5 }}>
         Como uma plataforma independente e agregadora, também precisamos de investimentos e ajuda financeira para conseguir entregar o máximo que a arte pode construir. Por isso contamos com uma aba Apoia-se para você que quiser contribuir com o nosso projeto de maneira rápida e fundamental.<br /><br />
