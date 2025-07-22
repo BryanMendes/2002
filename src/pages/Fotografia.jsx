@@ -11,7 +11,8 @@ function Fotografia() {
       color: '#F0F0C0', 
       fontSize: '3rem',
       textAlign: 'center',
-      padding: '20px'
+      padding: '20px',
+      paddingTop: '100px',
     }}>
       <div>
         <h1 style={{fontSize: '4rem', marginBottom: '20px'}}>FOTOGRAFIA</h1>

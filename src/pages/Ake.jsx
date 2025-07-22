@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LazyImage from '../components/LazyImage/LazyImage';
 
 function Ake() {
   const imagens = [
@@ -51,17 +52,22 @@ function Ake() {
       position: 'relative'
     }}>
       {/* Back button */}
-      <Link to="/" style={{
+      <button onClick={() => window.history.back()} style={{
         position: 'absolute',
         top: '20px',
         left: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '2rem',
-        zIndex: 10
+        zIndex: 10,
+        background: 'none',
+        border: 'none',
+        outline: 'none',
+        boxShadow: 'none',
+        cursor: 'default'
       }}>
         ←
-      </Link>
+      </button>
 
       {/* Content */}
       <div style={{
@@ -99,36 +105,39 @@ function Ake() {
               background: 'none',
               boxShadow: 'none',
             }}>
-              <img src={img.src} alt={img.legenda} style={{
-                width: '320px',
-                height: '320px',
-                objectFit: 'cover',
-                borderRadius: '8px',
-                marginBottom: '12px',
-              }} />
+              <picture>
+                <source srcSet={img.src.replace('.png', '.webp')} type="image/webp" />
+                <LazyImage src={img.src} alt={img.legenda} style={{
+                  width: '320px',
+                  height: '320px',
+                  objectFit: 'cover',
+                  borderRadius: '8px',
+                  marginBottom: '12px',
+                }} />
+              </picture>
               <span style={{ fontSize: '1rem', color: '#F0F0C0', marginTop: '4px' }}>{img.legenda}</span>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Next artist button */}
-      <Link to="/rfmees" style={{
-        position: 'absolute',
-        bottom: '20px',
-        right: '20px',
-        color: '#F0F0C0',
-        textDecoration: 'none',
-        fontSize: '1rem',
-        textAlign: 'right',
-        zIndex: 10
-      }}>
-        <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-          <span>próximo</span>
-          <span>artista</span>
-          <span style={{fontSize: '1.5rem'}}>→</span>
-        </div>
-      </Link>
+      {/* Next/Previous artist buttons */}
+      <div style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', maxWidth: 800, margin: '0 auto', padding: '0 20px', zIndex: 10 }}>
+        <Link to="/gui-romana" style={{ color: '#F0F0C0', textDecoration: 'none', fontSize: '1rem', textAlign: 'left', flex: 1 }}>
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0}}>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>artista</span>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>anterior</span>
+            <span style={{fontSize: '1.5rem', marginTop: '2px'}}>&larr;</span>
+          </div>
+        </Link>
+        <Link to="/rfmees" style={{ color: '#F0F0C0', textDecoration: 'none', fontSize: '1rem', textAlign: 'right', flex: 1 }}>
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0}}>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>próximo</span>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>artista</span>
+            <span style={{fontSize: '1.5rem', marginTop: '2px'}}>&rarr;</span>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

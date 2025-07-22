@@ -9,32 +9,31 @@ import './Header.css';
 function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
   const isDesktop = useMediaQuery(BREAKPOINTS.desktop);
-  const [showHeader, setShowHeader] = useState(!isDesktop);
-  const [mouseY, setMouseY] = useState(0);
+  // Remover lógica de showHeader
+  // const [showHeader, setShowHeader] = useState(!isDesktop);
+  // const [mouseY, setMouseY] = useState(0);
 
-  // Atualizar showHeader quando isDesktop mudar
-  useEffect(() => {
-    setShowHeader(!isDesktop);
-  }, [isDesktop]);
+  // Remover useEffect de showHeader
+  // useEffect(() => {
+  //   setShowHeader(!isDesktop);
+  // }, [isDesktop]);
 
-  useEffect(() => {
-    if (!isDesktop) {
-      setShowHeader(true);
-      return;
-    }
-    
-    const handleMouseMove = (e) => {
-      setMouseY(e.clientY);
-      if (e.clientY < 60) {
-        setShowHeader(true);
-      } else {
-        setShowHeader(false);
-      }
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [isDesktop]);
+  // useEffect(() => {
+  //   if (!isDesktop) {
+  //     setShowHeader(true);
+  //     return;
+  //   }
+  //   const handleMouseMove = (e) => {
+  //     setMouseY(e.clientY);
+  //     if (e.clientY < 60) {
+  //       setShowHeader(true);
+  //     } else {
+  //       setShowHeader(false);
+  //     }
+  //   };
+  //   window.addEventListener('mousemove', handleMouseMove);
+  //   return () => window.removeEventListener('mousemove', handleMouseMove);
+  // }, [isDesktop]);
 
   const fecharMenu = (e) => {
     if (e) e.preventDefault();
@@ -46,7 +45,7 @@ function Header() {
   }
 
   return (
-    <header className={`header-container ${menuAberto ? 'aberto' : 'fechado'}${showHeader ? ' header-visible' : ' header-hidden'}`}>
+    <header className={`header-container ${menuAberto ? 'aberto' : 'fechado'} header-visible`}>
       <div className="header-fechado-content">
         <div className="logo-cd-group">
           <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>

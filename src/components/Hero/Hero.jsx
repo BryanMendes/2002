@@ -32,7 +32,6 @@ function Hero() {
       {/* O conteúdo que fica sobre o vídeo */}
       <div className="hero-content">
         <h1 className="hero-title">2002.</h1>
-        <div className="arrow-down"></div>
       </div>
     </section>
   );

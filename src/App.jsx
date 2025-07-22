@@ -38,6 +38,14 @@ function LoadingSpinner() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   const location = useLocation();
   const scrollPositions = useRef(new Map());
@@ -91,6 +99,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       {shouldShowHeaderFooter && <Header />}
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>

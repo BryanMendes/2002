@@ -86,7 +86,9 @@
   right: 30px;
   background: none;
   border: none;
-  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  cursor: default;
   width: 60px;
   height: 60px;
   padding: 10px;
@@ -106,6 +108,52 @@
   border-bottom: 4px solid #111;
   border-right: 4px solid #111;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+.carousel-next-button:hover,
+.carousel-next-button:focus,
+.carousel-next-button:active {
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.carousel-prev-button {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: default;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-prev-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-top: 4px solid #111;
+  border-left: 4px solid #111;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.carousel-prev-button:hover,
+.carousel-prev-button:focus,
+.carousel-prev-button:active {
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Remover borda inferior do carrossel */
@@ -173,6 +221,18 @@
     border-bottom-width: 5px;
     border-right-width: 5px;
   }
+  .carousel-prev-button {
+    width: 80px;
+    height: 80px;
+    padding: 16px;
+    left: 50px;
+  }
+  .carousel-prev-button::after {
+    width: 40px;
+    height: 40px;
+    border-top-width: 5px;
+    border-left-width: 5px;
+  }
   .carousel-section-separator {
     margin-bottom: 60px;
   }
@@ -205,5 +265,17 @@
     height: 20px;
     border-bottom-width: 3px;
     border-right-width: 3px;
+  }
+  .carousel-prev-button {
+    left: 10px;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+  }
+  .carousel-prev-button::after {
+    width: 20px;
+    height: 20px;
+    border-top-width: 3px;
+    border-left-width: 3px;
   }
 }

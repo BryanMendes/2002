@@ -1,30 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LazyImage from '../components/LazyImage/LazyImage';
 
 function DoisMilEDois() {
   return (
     <div style={{ minHeight: '100vh', background: '#1E392A', color: '#F0F0C0', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', textAlign: 'center', position: 'relative', padding: '40px', paddingTop: '100px' }}>
       {/* Botão de voltar */}
-      <Link to="/" style={{
+      <button onClick={() => window.history.back()} style={{
         position: 'absolute',
         top: '80px',
         left: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '2rem',
-        zIndex: 10
+        zIndex: 10,
+        background: 'none',
+        border: 'none',
+        outline: 'none',
+        boxShadow: 'none',
+        cursor: 'default'
       }}>
         ←
-      </Link>
+      </button>
       {/* Gif de CD */}
-      <img src="/gif-1.gif" alt="CD animado" style={{
-        position: 'absolute',
-        top: '20px',
-        right: '20px',
-        width: '60px',
-        height: '60px',
-        zIndex: 10
-      }} />
+      <picture>
+        <source srcSet="/gif-1.webp" type="image/webp" />
+        <LazyImage src="/gif-1.gif" alt="CD animado" style={{
+          position: 'absolute',
+          top: '20px',
+          right: '20px',
+          width: '60px',
+          height: '60px',
+          zIndex: 10
+        }} />
+      </picture>
       {/* Título 2002. */}
       <h1 style={{fontSize: '3.5rem', marginBottom: '30px', color: '#F0F0C0', fontWeight: 900, letterSpacing: '-0.04em'}}>2002.</h1>
       <div style={{
@@ -50,40 +59,23 @@ function DoisMilEDois() {
           Somos também um site estilo plataforma que está reunindo arte visual, literatura, jornalismo, música, podcast, moda, exposições online, além de contar com a loja oficial 2002 e outras marcas. Tudo isso contribui para conexões, amizades, inspirações e também profissionalização do processo artístico independente. ARTE NÃO É HOBBIE.
         </p>
       </div>
-      {/* Botão de próximo artista */}
-      <Link to="/renata" style={{
-        position: 'absolute',
-        bottom: '32px',
-        right: '20px',
-        color: '#F0F0C0',
-        textDecoration: 'none',
-        fontSize: '1rem',
-        textAlign: 'center',
-        zIndex: 10
-      }}>
+      {/* Botões de navegação */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', maxWidth: 600, margin: '48px auto 0 auto', gap: '16px' }}>
+        <Link to="/bianca" style={{ color: '#F0F0C0', textDecoration: 'none', fontSize: '1rem', textAlign: 'center', flex: 1 }}>
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0'}}>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>artista</span>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>anterior</span>
+            <span style={{fontSize: '1.5rem', marginTop: '2px'}}>&larr;</span>
+          </div>
+        </Link>
+        <Link to="/renata" style={{ color: '#F0F0C0', textDecoration: 'none', fontSize: '1rem', textAlign: 'center', flex: 1 }}>
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0'}}>
           <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>próximo</span>
           <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>artista</span>
           <span style={{fontSize: '1.5rem', marginTop: '2px'}}>&rarr;</span>
         </div>
       </Link>
-      {/* Botão de artista anterior */}
-      <Link to="/bianca" style={{
-        position: 'absolute',
-        bottom: '32px',
-        left: '20px',
-        color: '#F0F0C0',
-        textDecoration: 'none',
-        fontSize: '1rem',
-        textAlign: 'center',
-        zIndex: 10
-      }}>
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0'}}>
-          <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>artista</span>
-          <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>anterior</span>
-          <span style={{fontSize: '1.5rem', marginTop: '2px'}}>&larr;</span>
         </div>
-      </Link>
     </div>
   );
 }

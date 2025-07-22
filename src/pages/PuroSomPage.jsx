@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './PuroSomPage.css';
+import Podcast from './Podcast.jsx';
 
 function PuroSomPage() {
   useEffect(() => {
@@ -24,15 +25,18 @@ function PuroSomPage() {
           </div>
         </h1>
         <p className="puro-som-page-subtitle">A NOSTALGIA DA RÁDIO FM...</p>
+        <Podcast />
         <div className="puro-som-page-body">
           <p>O projeto PURO SOM é uma celebração à era de ouro do rádio FM, trazendo de volta a magia das playlists cuidadosamente selecionadas, das vozes marcantes dos locutores e da emoção de descobrir novas músicas a cada sintonia.</p>
           <p>Inspirado nas rádios que marcaram gerações, nosso objetivo é proporcionar uma experiência sonora nostálgica, mas com um toque contemporâneo, conectando passado e presente através da música.</p>
           <p>Prepare-se para embarcar em uma viagem musical única, onde cada faixa conta uma história e cada programa é feito com paixão e dedicação.</p>
         </div>
       </main>
-      <button className="play-button-footer" aria-label="Play" onClick={() => navigate('/podcast')}>
-        <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>&#9654;</span>
-      </button>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: 32 }}>
+        <span aria-label="Play" style={{ fontSize: '2.5rem', color: '#F0F0C0', pointerEvents: 'none', cursor: 'default', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          &#9654;
+        </span>
+      </div>
     </div>
   );
 }

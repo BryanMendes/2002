@@ -6,6 +6,7 @@ import NossaArteSection from '../components/NossaArteSection/NossaArteSection.js
 import InfoSection from '../components/InfoSection/InfoSection.jsx';
 import ArchivesSection from '../components/ArchivesSection/ArchivesSection.jsx';
 import NewsletterSection from '../components/NewsletterSection/NewsletterSection.jsx';
+import LazyImage from '../components/LazyImage/LazyImage';
 
 // Dados para o primeiro carrossel (Idealizadores)
 const creatorSlides = [

@@ -1,21 +1,19 @@
 .puro-som-section.section-card {
-  background-color: #1E392A;
-  border: none;
+  background: #1E392A;
+  border: 3px solid #2a4d3b;
   border-radius: 0;
   box-shadow: none;
   margin: 0 auto 24px auto;
-  padding: 32px 0 16px 0;
+  padding: 0;
   max-width: 100vw;
   width: 100vw;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 0;
-  min-height: 220px;
-  padding-top: 120px;
-  border-top: 2px solid #3A4C3A;
+  justify-content: center;
+  min-height: 320px;
+  /* Removido qualquer border-bottom ou linha extra */
 }
 @media (max-width: 1023px) {
   .puro-som-section.section-card {
@@ -26,6 +24,111 @@
   .puro-som-section.section-card {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+}
+
+.puro-som-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  gap: 48px;
+}
+
+.puro-som-vinyl-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  min-width: 180px;
+  max-width: 260px;
+  height: 220px;
+  margin: 0 0 0 0;
+}
+.puro-som-vinyl {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0;
+  background: none;
+}
+
+.puro-som-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  text-align: left;
+}
+.puro-som-title-img {
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 0 0;
+  color: #F0F0C0;
+  letter-spacing: -0.04em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+.puro-som-title-img span {
+  display: block;
+}
+
+.puro-som-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 32px 0;
+}
+.puro-som-saiba-btn {
+  background: #1E392A;
+  color: #F0F0C0;
+  border: 2px solid #F0F0C0;
+  border-radius: 8px;
+  padding: 12px 36px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  box-shadow: none;
+}
+.puro-som-saiba-btn:hover {
+  background: #F0F0C0;
+  color: #1E392A;
+}
+.saiba-mais-button, .puro-som-saiba-btn {
+  text-decoration: none !important;
+}
+
+@media (max-width: 900px) {
+  .puro-som-row {
+    flex-direction: row;
+    gap: 24px;
+    padding: 32px 0 0 0;
+  }
+  .puro-som-vinyl-container {
+    width: 160px;
+    height: 160px;
+    min-width: 120px;
+    max-width: 180px;
+  }
+  .puro-som-title-img {
+    font-size: 2.5rem;
+  }
+  .puro-som-btn-wrapper {
+    margin: 32px 0 24px 0;
   }
 }
 
@@ -96,29 +199,66 @@
 }
 
 .puro-som-button {
-  background-color: transparent;
+  background-color: #1E392A;
   border: 2px solid #F0F0C0;
   color: #F0F0C0;
-  padding: 8px 24px;
-  border-radius: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
   margin: 0;
-  display: block;
-  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.puro-som-title,
-.puro-som-button {
-  color: #F0F0F0;
-  border-color: #F0F0F0;
+.puro-som-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .puro-som-button:hover {
   background: #F0F0F0;
   color: #1E392A;
-  transition: background 0.2s, color 0.2s;
+  border-color: #F0F0C0;
+}
+
+.puro-som-play-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1E392A;
+  border: 2px solid #F0F0C0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s, border-color 0.2s;
+  margin: 24px auto 0 auto;
+}
+.puro-som-play-btn:hover {
+  background: #F0F0F0;
+  border-color: #1E392A;
+}
+.puro-som-play-icon {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 22px solid #F0F0C0;
+  margin-left: 6px;
 }
 
 /* Removidas todas as media queries para garantir layout horizontal universal */

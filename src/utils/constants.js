@@ -15,7 +15,7 @@ export const COLORS = {
 };
 
 // Artist pages that don't need header/footer
-export const NO_HEADER_FOOTER_PAGES = ['/ake', '/rfmees', '/gui-romana', '/puro-som'];
+export const NO_HEADER_FOOTER_PAGES = [];
 
 // Navigation items
 export const NAV_ITEMS = [

@@ -11,12 +11,14 @@ function ApoiaSe() {
     setTimeout(() => setCopied(false), 2000);
   };
   return (
-    <div style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#1E392A', color: '#F0F0C0', padding: '40px 20px' }}>
+    <div style={{ minHeight: '100vh', background: '#1E392A', color: '#F0F0C0', position: 'relative', padding: '40px 20px', paddingTop: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      {/* Seta de voltar */}
+      <button onClick={() => window.location.href = '/'} style={{ position: 'absolute', top: '48px', left: '32px', color: '#F0F0C0', background: 'none', border: 'none', outline: 'none', boxShadow: 'none', textDecoration: 'none', fontSize: '4rem', fontWeight: 900, zIndex: 10 }}>&lt;</button>
       <h1 style={{ fontSize: '3rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '32px' }}>Apoia-se</h1>
       <p style={{ maxWidth: 600, fontSize: '1.2rem', textAlign: 'center', lineHeight: 1.5 }}>
         Como uma plataforma independente e agregadora, também precisamos de investimentos e ajuda financeira para conseguir entregar o máximo que a arte pode construir. Por isso contamos com uma aba Apoia-se para você que quiser contribuir com o nosso projeto de maneira rápida e fundamental.<br /><br />
         <span
-          style={{ color: '#9DFF70', cursor: 'pointer', textDecoration: 'underline', fontWeight: 700 }}
+          style={{ color: '#F0F0C0', fontWeight: 400, textDecoration: 'none', cursor: 'default' }}
           onClick={() => setModalOpen(true)}
         >
           Clique para saber mais.
@@ -47,12 +49,12 @@ function ApoiaSe() {
             textAlign: 'center',
             boxShadow: '0 4px 24px rgba(0,0,0,0.18)'
           }}>
-            <h2 style={{ fontSize: '2rem', marginBottom: '18px', color: '#9DFF70' }}>Como funciona o Apoia-se?</h2>
+            <h2 style={{ fontSize: '2rem', marginBottom: '18px', color: '#F0F0C0' }}>Como funciona o Apoia-se?</h2>
             <p style={{ fontSize: '1.1rem', marginBottom: '24px' }}>
               Você pode contribuir com o valor que desejar. Todo apoio é fundamental para mantermos a 2002 viva e expandindo a arte independente no Brasil!
             </p>
             <img src="/qrcode.jpeg" alt="QR Code Apoia-se" style={{ width: '180px', height: '180px', margin: '0 auto 12px auto', display: 'block', borderRadius: '8px', background: '#fff' }} />
-            <div style={{ fontSize: '1.1rem', color: '#9DFF70', fontWeight: 700, marginBottom: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+            <div style={{ fontSize: '1.1rem', color: '#F0F0C0', fontWeight: 700, marginBottom: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
               chave: {email}
               <button
                 onClick={handleCopy}
@@ -72,18 +74,9 @@ function ApoiaSe() {
               </button>
             </div>
             <button
-              style={{
-                background: '#9DFF70',
-                color: '#1E392A',
-                border: 'none',
-                borderRadius: '6px',
-                padding: '10px 24px',
-                fontWeight: 700,
-                fontSize: '1rem',
-                cursor: 'pointer',
-                marginTop: '8px'
-              }}
+              className="saiba-mais-button"
               onClick={() => setModalOpen(false)}
+              style={{ margin: '16px auto 0 auto', fontWeight: 700, fontSize: '1rem' }}
             >
               Fechar
             </button>

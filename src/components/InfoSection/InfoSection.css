@@ -76,16 +76,22 @@
     }
     
     .info-image-container {
-      max-width: 540px;
+      max-width: 600px;
       height: 400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .info-image-container img {
       width: 100%;
       height: 100%;
+      max-width: 600px;
+      max-height: 400px;
       object-fit: contain;
       object-position: center;
       display: block;
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
     }
     

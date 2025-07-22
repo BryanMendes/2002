@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LazyImage from '../components/LazyImage/LazyImage';
 
 function GuiRomana() {
   return (
@@ -20,26 +21,31 @@ function GuiRomana() {
         position: 'absolute',
         inset: 0,
         zIndex: 0,
-        backgroundImage: 'url(/gui-back.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        transform: 'scaleX(-1)',
         pointerEvents: 'none',
         filter: 'brightness(0.7)',
-      }} />
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
+      }}>
+        <LazyImage src="/gui-back.png" alt="Fundo Gui Romana" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scaleX(-1)' }} />
+      </div>
       {/* Back button */}
-      <Link to="/" style={{
+      <button onClick={() => window.history.back()} style={{
         position: 'absolute',
         top: '20px',
         left: '20px',
         color: '#F0F0C0',
         textDecoration: 'none',
         fontSize: '2rem',
-        zIndex: 2
+        zIndex: 2,
+        background: 'none',
+        border: 'none',
+        outline: 'none',
+        boxShadow: 'none',
+        cursor: 'default'
       }}>
         ←
-      </Link>
+      </button>
 
       {/* Content */}
       <div style={{
@@ -59,23 +65,23 @@ function GuiRomana() {
         </p>
       </div>
 
-      {/* Next artist button */}
-      <Link to="/ake" style={{
-        position: 'absolute',
-        bottom: '20px',
-        right: '20px',
-        color: '#F0F0C0',
-        textDecoration: 'none',
-        fontSize: '1rem',
-        textAlign: 'right',
-        zIndex: 10
-      }}>
-        <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-          <span>próximo</span>
-          <span>artista</span>
-          <span style={{fontSize: '1.5rem'}}>→</span>
-        </div>
-      </Link>
+      {/* Next/Previous artist buttons */}
+      <div style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', maxWidth: 800, margin: '0 auto', padding: '0 20px', zIndex: 10 }}>
+        <Link to="/rfmees" style={{ color: '#F0F0C0', textDecoration: 'none', fontSize: '1rem', textAlign: 'left', flex: 1 }}>
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0}}>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>artista</span>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>anterior</span>
+            <span style={{fontSize: '1.5rem', marginTop: '2px'}}>&larr;</span>
+          </div>
+        </Link>
+        <Link to="/ake" style={{ color: '#F0F0C0', textDecoration: 'none', fontSize: '1rem', textAlign: 'right', flex: 1 }}>
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0}}>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>próximo</span>
+            <span style={{display: 'block', fontWeight: 900, fontSize: '1.1rem', letterSpacing: '0.05em'}}>artista</span>
+            <span style={{fontSize: '1.5rem', marginTop: '2px'}}>&rarr;</span>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

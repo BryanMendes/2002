@@ -14,7 +14,7 @@ function ArchivesSection() {
         </video>
         <div className="archives-overlay">
           <h2>ARQUIVOS</h2>
-          <button>ACESSAR</button>
+          <button>INSPIRE-SE</button>
         </div>
       </div>
       {/* Bloco com o conteúdo de texto e botões */}

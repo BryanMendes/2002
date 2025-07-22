@@ -1,28 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './PuroSomSection.css';
+import LazyImage from '../LazyImage/LazyImage';
 
 function PuroSomSection() {
   return (
     <section className="puro-som-section section-card">
-      <div className="puro-som-content-row">
-        <div className="puro-som-gif-container">
-          <img src="/gif-1.gif" alt="CD animado girando" />
+      <div className="puro-som-row">
+        <div className="puro-som-vinyl-container">
+          <LazyImage src="/gif-1.gif" alt="CD animado girando" className="puro-som-vinyl" />
         </div>
-        <div className="puro-som-text-container">
-          <h2 className="puro-som-title">
-            <div>PURO</div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3em' }}>
-              SOM
-              <img src="/gif-1.gif" alt="CD animado" style={{ width: '1.2em', height: '1.2em', marginLeft: '0.1em', verticalAlign: 'middle' }} />
-            </div>
+        <div className="puro-som-text-block">
+          <h2 className="puro-som-title-img">
+            <span>PURO</span>
+            <span>SOM.</span>
           </h2>
         </div>
       </div>
-      <div className="puro-som-button-wrapper">
-        <Link to="/puro-som" className="puro-som-button" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 56, height: 56, borderRadius: '50%', padding: 0 }}>
-          <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', fontSize: 32 }}>&#9654;</span>
-        </Link>
+      <div className="puro-som-btn-wrapper">
+        <Link to="/puro-som" className="saiba-mais-button">SAIBA MAIS</Link>
       </div>
     </section>
   );
