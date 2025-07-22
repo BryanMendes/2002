@@ -10,7 +10,6 @@ function Podcast() {
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [volume, setVolume] = useState(1);
-  const [showControls, setShowControls] = useState(false);
 
   const handlePlayPause = () => {
     if (isPlaying) {
@@ -160,44 +159,38 @@ function Podcast() {
         display: 'flex', 
         alignItems: 'center', 
         gap: 8,
-        opacity: showControls ? 1 : 0.6,
+        opacity: 0.8,
         transition: 'opacity 0.3s ease'
       }}>
-        <button
-          onClick={() => setShowControls(!showControls)}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#F0F0C0',
-            cursor: 'pointer',
-            padding: 4,
-            borderRadius: 4,
-            opacity: 0.7
-          }}
-        >
+        <div style={{
+          background: 'none',
+          border: 'none',
+          color: '#F0F0C0',
+          padding: 4,
+          borderRadius: 4,
+          opacity: 0.7
+        }}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 9v6h4l5 5V4L7 9H3z" fill="currentColor"/>
             <path d="M16.5 12c0-1.77-1-3.29-2.5-4.03v8.06A4.978 4.978 0 0016.5 12z" fill="currentColor"/>
           </svg>
-        </button>
-        {showControls && (
-          <input
-            type="range"
-            min={0}
-            max={1}
-            step={0.01}
-            value={volume}
-            onChange={handleVolumeChange}
-            style={{ 
-              flex: 1,
-              height: 3,
-              background: 'rgba(240,240,192,0.2)',
-              borderRadius: 2,
-              outline: 'none',
-              cursor: 'pointer'
-            }}
-          />
-        )}
+        </div>
+        <input
+          type="range"
+          min={0}
+          max={1}
+          step={0.01}
+          value={volume}
+          onChange={handleVolumeChange}
+          style={{ 
+            flex: 1,
+            height: 3,
+            background: 'rgba(240,240,192,0.2)',
+            borderRadius: 2,
+            outline: 'none',
+            cursor: 'pointer'
+          }}
+        />
       </div>
     </div>
   );
