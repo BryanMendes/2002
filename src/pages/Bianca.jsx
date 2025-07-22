@@ -44,12 +44,12 @@ function Bianca() {
         </div>
       </div>
       {/* Título */}
-      <h1 style={{fontSize: '2.5rem', margin: '24px 0 0 0', color: '#F0F0F0', fontWeight: 900, letterSpacing: '-0.04em'}}>Bianca</h1>
+      <h1 style={{fontSize: '2.5rem', margin: '24px 0 0 0', color: '#F0F0F0', fontWeight: 900, letterSpacing: '-0.04em'}}>Bianca Alvez</h1>
       
       {/* Texto descritivo */}
       <div style={{ maxWidth: '600px', margin: '0 auto 32px auto', lineHeight: 1.6, color: '#F0F0F0', fontSize: '1.1rem', textAlign: 'justify', fontWeight: 500 }}>
         <p style={{marginBottom: '20px'}}>
-          Bianca é uma artista periférica de São Mateus, Zona Leste de São Paulo, nascida em 2001. Em seu trabalho, ela procura traduzir em fotografia suas experiências pessoais, reflexões acerca da vida e atualmente pesquisa as relações culturais entre natureza e arte, estudo que também influencia seu olhar/produção artística.
+          Bianca Alvez é uma artista periférica de São Mateus, Zona Leste de São Paulo, nascida em 2001. Em seu trabalho, ela procura traduzir em fotografia suas experiências pessoais, reflexões acerca da vida e atualmente pesquisa as relações culturais entre natureza e arte, estudo que também influencia seu olhar/produção artística.
         </p>
       </div>
       {/* Galeria de imagens */}
